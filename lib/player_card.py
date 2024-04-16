@@ -3,13 +3,14 @@ import requests
 from PIL import Image
 from io import BytesIO
 from lib.team_creator import *
+from lib.util import *
 
 
 class PlayerCard:
     def __init__(self, master_frame, role):
         self.role = role
-        self.champ_image = customtkinter.CTkImage(Image.open("data/blank.png"), size=(100,100))
-
+        self.champ_image = customtkinter.CTkImage(Image.open(os.path.join(SCRIPT_DIR, "blank.png")), size=(100,100))
+        
         self.champ_image_label = customtkinter.CTkLabel(master=master_frame, text="", image=self.champ_image, height=1, )
         self.champ_image_label.grid(row=1, column=0, pady=0, padx=5, columnspan=5, rowspan=5, sticky="nesw")
 
@@ -38,11 +39,11 @@ class PlayerCard:
         def update_label_color(val):
             val_float = float(val)
             if val_float > 50:
-                green_intensity = 255 - int(255 * (val_float - 50) / 50) ** 2  # Reverse the intensity
-                return f"#20b3{min(green_intensity, 255):02x}"
+                green_intensity = max(255 - int(255 * (val_float - 50) / 50) ** 2, 0)  # Ensure intensity is within valid range
+                return f"#20b3{green_intensity:02x}"
             else:
-                red_intensity = 255 - int(255 * (50 - val_float) / 50) ** 2  # Reverse the intensity
-                return f"#c9{min(red_intensity, 255):02x}21"
+                red_intensity = max(255 - int(255 * (50 - val_float) / 50) ** 2, 0)  # Ensure intensity is within valid range
+            return f"#c9{red_intensity:02x}21"
         champion = pick_random_champ(self.role)
         #print(champion)
         self.champ_name.configure(text = champion['name'])
@@ -55,3 +56,9 @@ class PlayerCard:
         image = Image.open(BytesIO(image_data))
         new_champ_image = customtkinter.CTkImage(image, size=(100,100))
         self.champ_image_label.configure(image=new_champ_image)
+
+    def reset_card(self):
+        self.champ_name.configure(text = "-")
+        self.win_rate.configure(text = "-")
+        self.pick_rate.configure(text = "-")
+        self.champ_image_label.configure(image=self.champ_image)
