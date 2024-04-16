@@ -1,5 +1,6 @@
 import random
 import json
+from lib.util import *
 
 PLAYERS = ["enzo", "steven", "eric", "rudy", "zack",
            "matt", "gibby", "sohail", "koby", "jason"]
@@ -34,7 +35,7 @@ def assign_champions(team1, team2):
 def pick_random_champ(role):
     # Load champion data from JSON file
     json_filename = f"data/{role}_data.json"
-    with open(json_filename, "r", encoding="utf-8") as json_file:
+    with open(os.path.join(SCRIPT_DIR, json_filename), "r", encoding="utf-8") as json_file:
         champion_data_list = json.load(json_file)
 
     # Check if champion data is available
