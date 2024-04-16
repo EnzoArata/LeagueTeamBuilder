@@ -37,7 +37,19 @@ class TeamMaker:
         players = self.player_entry.get()
         split_list = players.split(",")
         return (split_list if len(split_list) > 1 else None)
-        
+    
+    def slider_event(self, value):
+        wacky_enabled = self.wacky_enabled.get()
+        for card in self.player_cards:
+            card.wacky_value = value
+            card.wacky_enabled = wacky_enabled
+    
+    def checkbox_event(self):
+        wacky_enabled = self.wacky_enabled.get()
+        value = self.wacky_slider.get()
+        for card in self.player_cards:
+            card.wacky_value = value
+            card.wacky_enabled = wacky_enabled
 
     def setup_team_maker_screen(self, root):
         frame = customtkinter.CTkFrame(master=root, fg_color="#171721")
@@ -56,6 +68,23 @@ class TeamMaker:
         button = customtkinter.CTkButton(master=frame, text="Randomize Teams", font=("Inter", 16, "bold"),
                                         command=self.create_teams, fg_color="#04DA8B", text_color="#FFFFFF", height=45, width=250 )
         button.grid(row=0, column=1, pady=5, padx=12, columnspan=1)
+
+        wacky_frame = customtkinter.CTkFrame(master=frame, fg_color="#323259", border_color="#6C6C87", border_width=2,
+                                             height=70)
+        #team_1_frame.grid_propagate(False)
+        wacky_frame.grid(row=1, column=0, sticky="nsew", columnspan=1, rowspan=1, pady=3)
+        self.define_grid(wacky_frame, 3, 1)
+
+        wacky_label = customtkinter.CTkLabel(master=wacky_frame, text="Wackyness Factor", font=("Inter", 16, "bold"),
+                                              text_color="#a1a1b3", height=5)
+        wacky_label.grid(row=0, column=0, pady=[0,0], padx=0,)
+
+        self.wacky_slider = customtkinter.CTkSlider(master=wacky_frame, from_=0.1, to=99.9, command=self.slider_event)
+        self.wacky_slider.grid(row=0, column=1)
+
+        self.wacky_enabled = customtkinter.CTkCheckBox(master=wacky_frame, text="Enabled?", font=("Inter", 12, "bold"),
+                                                  text_color="#a1a1b3", command=self.checkbox_event,)
+        self.wacky_enabled.grid(row=0, column=2)
 
 
         team_1_frame = customtkinter.CTkFrame(master=frame, fg_color="#3f3f54", border_color="#6C6C87", border_width=2,)
