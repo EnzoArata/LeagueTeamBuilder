@@ -7,10 +7,12 @@ from lib.util import *
 
 
 class PlayerCard:
-    def __init__(self, master_frame, role):
+    def __init__(self, master_frame, role, min_win_rate, max_win_rate, min_play_rate, max_play_rate):
         self.role = role
-        self.wacky_enabled = False
-        self.wacky_value = 0
+        self.min_win_rate = min_win_rate
+        self.max_win_rate = max_win_rate
+        self.min_play_rate = min_play_rate
+        self.max_play_rate = max_play_rate
         self.champ_image = customtkinter.CTkImage(Image.open(os.path.join(SCRIPT_DIR, "blank.png")), size=(100,100))
         
         self.champ_image_label = customtkinter.CTkLabel(master=master_frame, text="", image=self.champ_image, height=1, )
@@ -46,10 +48,8 @@ class PlayerCard:
             else:
                 red_intensity = max(255 - int(255 * (50 - val_float) / 50) ** 2, 0)  # Ensure intensity is within valid range
             return f"#c9{red_intensity:02x}21"
-        if self.wacky_enabled:
-            champion = pick_random_champ(self.role, self.wacky_value)
-        else:
-            champion = pick_random_champ(self.role)
+
+        champion = pick_random_champ(self.role, self.min_win_rate.get(),self.max_win_rate.get(), self.min_play_rate.get(), self.max_play_rate.get())
         #print(champion)
         self.champ_name.configure(text = champion['name'])
         self.win_rate.configure(text = "WR " +champion['winrate'] + "%", text_color = update_label_color(champion['winrate']))

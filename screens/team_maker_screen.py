@@ -38,18 +38,18 @@ class TeamMaker:
         split_list = players.split(",")
         return (split_list if len(split_list) > 1 else None)
     
-    def slider_event(self, value):
-        wacky_enabled = self.wacky_enabled.get()
-        for card in self.player_cards:
-            card.wacky_value = value
-            card.wacky_enabled = wacky_enabled
+    # def slider_event(self, value):
+    #     wacky_enabled = self.wacky_enabled.get()
+    #     for card in self.player_cards:
+    #         card.wacky_value = value
+    #         card.wacky_enabled = wacky_enabled
     
-    def checkbox_event(self):
-        wacky_enabled = self.wacky_enabled.get()
-        value = self.wacky_slider.get()
-        for card in self.player_cards:
-            card.wacky_value = value
-            card.wacky_enabled = wacky_enabled
+    # def checkbox_event(self):
+    #     wacky_enabled = self.wacky_enabled.get()
+    #     value = self.wacky_slider.get()
+    #     for card in self.player_cards:
+    #         card.wacky_value = value
+    #         card.wacky_enabled = wacky_enabled
 
     def setup_team_maker_screen(self, root):
         frame = customtkinter.CTkFrame(master=root, fg_color="#171721")
@@ -69,24 +69,57 @@ class TeamMaker:
                                         command=self.create_teams, fg_color="#04DA8B", text_color="#FFFFFF", height=45, width=250 )
         button.grid(row=0, column=1, pady=5, padx=12, columnspan=1)
 
-        wacky_frame = customtkinter.CTkFrame(master=frame, fg_color="#323259", border_color="#6C6C87", border_width=2,
-                                             height=70)
-        #team_1_frame.grid_propagate(False)
-        wacky_frame.grid(row=1, column=0, sticky="nsew", columnspan=1, rowspan=1, pady=3)
-        self.define_grid(wacky_frame, 3, 1)
 
-        wacky_label = customtkinter.CTkLabel(master=wacky_frame, text="Wackyness Factor", font=("Inter", 16, "bold"),
+        #####################################################################################################################
+
+        settings_frame = customtkinter.CTkFrame(master=frame, fg_color="#323259", border_color="#6C6C87", border_width=2,
+                                             height=70,width=350)
+        settings_frame.grid(row=1, column=0, sticky="nsew", columnspan=2, rowspan=1, pady=3)
+        #settings_frame.grid_propagate(False)
+        self.define_grid(settings_frame, 10, 1)
+
+        win_rate_label = customtkinter.CTkLabel(master=settings_frame, text="Settings", font=("Inter", 18, "bold"),
                                               text_color="#a1a1b3", height=5)
-        wacky_label.grid(row=0, column=0, pady=[0,0], padx=0,)
+        win_rate_label.grid(row=0, column=0, pady=[0,0], padx=0,)
 
-        self.wacky_slider = customtkinter.CTkSlider(master=wacky_frame, from_=0.1, to=99.9, command=self.slider_event)
-        self.wacky_slider.grid(row=0, column=1)
+        min_win_label = customtkinter.CTkLabel(master=settings_frame, text="Win Rate Min", font=("Inter", 14, "bold"),
+                                              text_color="#a1a1b3", height=5)
+        min_win_label.grid(row=0, column=1, pady=[0,0], padx=2, stick="e")
 
-        self.wacky_enabled = customtkinter.CTkCheckBox(master=wacky_frame, text="Enabled?", font=("Inter", 12, "bold"),
-                                                  text_color="#a1a1b3", command=self.checkbox_event,)
-        self.wacky_enabled.grid(row=0, column=2)
+        self.min_win_rate = customtkinter.CTkEntry(master=settings_frame, font=("Inter", 14, "bold"), text_color="#a1a1b3",
+                                                    height=5, width=40)
+        self.min_win_rate.grid(row=0, column=2, stick="w")
+        self.min_win_rate.insert(0, "40")
 
+        max_win_label = customtkinter.CTkLabel(master=settings_frame, text="Win Rate Max", font=("Inter", 14, "bold"),
+                                              text_color="#a1a1b3", height=5)
+        max_win_label.grid(row=0, column=3, pady=[0,0], padx=2, stick="e")
 
+        self.max_win_rate = customtkinter.CTkEntry(master=settings_frame, font=("Inter", 14, "bold"), text_color="#a1a1b3",
+                                                    height=5, width=40)
+        self.max_win_rate.grid(row=0, column=4, stick="w")
+        self.max_win_rate.insert(0, "60")
+
+        min_play_label = customtkinter.CTkLabel(master=settings_frame, text="Play Rate Min", font=("Inter", 14, "bold"),
+                                              text_color="#a1a1b3", height=5)
+        min_play_label.grid(row=0, column=6, pady=[0,0], padx=2, stick="e")
+
+        self.min_play_rate = customtkinter.CTkEntry(master=settings_frame, font=("Inter", 14, "bold"), text_color="#a1a1b3",
+                                                    height=5, width=40)
+        self.min_play_rate.grid(row=0, column=7, stick="w")
+        self.min_play_rate.insert(0, "0.00")
+
+        max_play_label = customtkinter.CTkLabel(master=settings_frame, text="Play Rate Max", font=("Inter", 14, "bold"),
+                                              text_color="#a1a1b3", height=5)
+        max_play_label.grid(row=0, column=8, pady=[0,0], padx=2, stick="e")
+        
+
+        self.max_play_rate = customtkinter.CTkEntry(master=settings_frame, font=("Inter", 14, "bold"), text_color="#a1a1b3",
+                                                    height=5, width=40)
+        self.max_play_rate.grid(row=0, column=9, stick="w")
+        self.max_play_rate.insert(0, "25.00")
+
+        #####################################################################################################################
         team_1_frame = customtkinter.CTkFrame(master=frame, fg_color="#3f3f54", border_color="#6C6C87", border_width=2,)
         #team_1_frame.grid_propagate(False)
         team_1_frame.grid(row=2, column=0, sticky="nsew", columnspan=5, rowspan=5)
@@ -105,7 +138,7 @@ class TeamMaker:
         # image_data = response.content
         # image = Image.open(BytesIO(image_data))
         #team1_top_champ_image = customtkinter.CTkImage(image, size=(100,100))
-        team1_top_player_card = PlayerCard(team1_top_frame, "top")
+        team1_top_player_card = PlayerCard(team1_top_frame, "top", self.min_win_rate, self.max_win_rate, self.min_play_rate, self.max_play_rate)
 
 
         team1_jg_frame = customtkinter.CTkFrame(master=team_1_frame, fg_color="#1f1f21", border_color="#6C6C87", border_width=2,)
@@ -116,7 +149,7 @@ class TeamMaker:
         team1_jg_player_name = customtkinter.CTkLabel(master=team1_jg_frame, text="Jungle", font=("Inter", 20, "bold"), text_color="#6C6C87")
         team1_jg_player_name.grid(row=0, column=2, pady=[3,0], padx=5, sticky="n")
 
-        team1_jg_player_card = PlayerCard(team1_jg_frame, "jg")
+        team1_jg_player_card = PlayerCard(team1_jg_frame, "jg", self.min_win_rate, self.max_win_rate, self.min_play_rate, self.max_play_rate)
 
         
 
@@ -128,7 +161,7 @@ class TeamMaker:
         team1_mid_player_name = customtkinter.CTkLabel(master=team1_mid_frame, text="Mid", font=("Inter", 20, "bold"), text_color="#6C6C87")
         team1_mid_player_name.grid(row=0, column=2, pady=[3,0], padx=5, sticky="n")
 
-        team1_mid_player_card = PlayerCard(team1_mid_frame, "mid")
+        team1_mid_player_card = PlayerCard(team1_mid_frame, "mid", self.min_win_rate, self.max_win_rate, self.min_play_rate, self.max_play_rate)
 
         team1_bot_frame = customtkinter.CTkFrame(master=team_1_frame, fg_color="#1f1f21", border_color="#6C6C87", border_width=2,)
         team1_bot_frame.grid(row=0, column=6, sticky="nsew", columnspan=2, rowspan=3, pady=5, padx=4)
@@ -138,7 +171,7 @@ class TeamMaker:
         team1_bot_player_name = customtkinter.CTkLabel(master=team1_bot_frame, text="Bot", font=("Inter", 20, "bold"), text_color="#6C6C87")
         team1_bot_player_name.grid(row=0, column=2, pady=[3,0], padx=5, sticky="n")
 
-        team1_bot_player_card = PlayerCard(team1_bot_frame, "bot")
+        team1_bot_player_card = PlayerCard(team1_bot_frame, "bot", self.min_win_rate, self.max_win_rate, self.min_play_rate, self.max_play_rate)
 
         team1_sup_frame = customtkinter.CTkFrame(master=team_1_frame, fg_color="#1f1f21", border_color="#6C6C87", border_width=2,)
         team1_sup_frame.grid(row=0, column=8, sticky="nsew", columnspan=2, rowspan=3, pady=5, padx=4)
@@ -148,7 +181,7 @@ class TeamMaker:
         team1_sup_player_name = customtkinter.CTkLabel(master=team1_sup_frame, text="Support", font=("Inter", 20, "bold"), text_color="#6C6C87")
         team1_sup_player_name.grid(row=0, column=2, pady=[3,0], padx=5, sticky="n")
 
-        team1_sup_player_card = PlayerCard(team1_sup_frame, "sup")
+        team1_sup_player_card = PlayerCard(team1_sup_frame, "sup", self.min_win_rate, self.max_win_rate, self.min_play_rate, self.max_play_rate)
 
         ############################################################################################
 
@@ -164,7 +197,7 @@ class TeamMaker:
         team2_top_player_name = customtkinter.CTkLabel(master=team2_top_frame, text="Top", font=("Inter", 20, "bold"), text_color="#6C6C87")
         team2_top_player_name.grid(row=0, column=2, pady=[3,0], padx=5, sticky="n")
 
-        team2_top_player_card = PlayerCard(team2_top_frame, "top")
+        team2_top_player_card = PlayerCard(team2_top_frame, "top", self.min_win_rate, self.max_win_rate, self.min_play_rate, self.max_play_rate)
 
 
         team2_jg_frame = customtkinter.CTkFrame(master=team_2_frame, fg_color="#1f1f21", border_color="#6C6C87", border_width=2,)
@@ -175,7 +208,7 @@ class TeamMaker:
         team2_jg_player_name = customtkinter.CTkLabel(master=team2_jg_frame, text="Jungle", font=("Inter", 20, "bold"), text_color="#6C6C87")
         team2_jg_player_name.grid(row=0, column=2, pady=[3,0], padx=5, sticky="n")
 
-        team2_jg_player_card = PlayerCard(team2_jg_frame, "jg")
+        team2_jg_player_card = PlayerCard(team2_jg_frame, "jg", self.min_win_rate, self.max_win_rate, self.min_play_rate, self.max_play_rate)
 
         team2_mid_frame = customtkinter.CTkFrame(master=team_2_frame, fg_color="#1f1f21", border_color="#6C6C87", border_width=2,)
         team2_mid_frame.grid(row=0, column=4, sticky="nsew", columnspan=2, rowspan=3, pady=5, padx=4)
@@ -185,7 +218,7 @@ class TeamMaker:
         team2_mid_player_name = customtkinter.CTkLabel(master=team2_mid_frame, text="Mid", font=("Inter", 20, "bold"), text_color="#6C6C87")
         team2_mid_player_name.grid(row=0, column=2, pady=[3,0], padx=5, sticky="n")
 
-        team2_mid_player_card = PlayerCard(team2_mid_frame, "mid")
+        team2_mid_player_card = PlayerCard(team2_mid_frame, "mid", self.min_win_rate, self.max_win_rate, self.min_play_rate, self.max_play_rate)
 
         team2_bot_frame = customtkinter.CTkFrame(master=team_2_frame, fg_color="#1f1f21", border_color="#6C6C87", border_width=2,)
         team2_bot_frame.grid(row=0, column=6, sticky="nsew", columnspan=2, rowspan=3, pady=5, padx=4)
@@ -195,7 +228,7 @@ class TeamMaker:
         team2_bot_player_name = customtkinter.CTkLabel(master=team2_bot_frame, text="Bot", font=("Inter", 20, "bold"), text_color="#6C6C87")
         team2_bot_player_name.grid(row=0, column=2, pady=[3,0], padx=5, sticky="n")
 
-        team2_bot_player_card = PlayerCard(team2_bot_frame, "bot")
+        team2_bot_player_card = PlayerCard(team2_bot_frame, "bot", self.min_win_rate, self.max_win_rate, self.min_play_rate, self.max_play_rate)
 
         team2_sup_frame = customtkinter.CTkFrame(master=team_2_frame, fg_color="#1f1f21", border_color="#6C6C87", border_width=2,)
         team2_sup_frame.grid(row=0, column=8, sticky="nsew", columnspan=2, rowspan=3, pady=5, padx=4)
@@ -205,7 +238,7 @@ class TeamMaker:
         team2_sup_player_name = customtkinter.CTkLabel(master=team2_sup_frame, text="Support", font=("Inter", 20, "bold"), text_color="#6C6C87")
         team2_sup_player_name.grid(row=0, column=2, pady=[3,0], padx=5, sticky="n")
 
-        team2_sup_player_card = PlayerCard(team2_sup_frame, "sup")
+        team2_sup_player_card = PlayerCard(team2_sup_frame, "sup", self.min_win_rate, self.max_win_rate, self.min_play_rate, self.max_play_rate)
 
 
         self.team1_player_names = [team1_top_player_name, team1_jg_player_name, team1_mid_player_name, team1_bot_player_name, team1_sup_player_name]
