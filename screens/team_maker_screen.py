@@ -16,21 +16,22 @@ class TeamMaker:
             frame.grid_rowconfigure(i, weight=1)
 
     def create_teams(self):
-        print("Forming Teams")
         players = self.get_players()
-        print(players)
         if players:
-            self.team1, self.team2 = form_random_teams(players)
+            if self.current_mode == "summoners_rift":
+                self.team1, self.team2 = form_random_teams(players)
         else:
-            self.team1, self.team2 = form_random_teams()
-        for count, player in enumerate(self.team1):
-            self.team1_player_names[count].configure(text=player)
-        for count, player in enumerate(self.team2):
-            self.team2_player_names[count].configure(text=player)
-        self.clear_player_cards()
+            if self.current_mode == "summoners_rift":
+                self.team1, self.team2 = form_random_teams()
+        if self.current_mode == "summoners_rift":
+            for count, player in enumerate(self.team1):
+                self.summoners_rift_team1_player_names[count].configure(text=player)
+            for count, player in enumerate(self.team2):
+                self.summoners_rift_team2_player_names[count].configure(text=player)
+            self.clear_player_cards()
 
     def clear_player_cards(self):
-        for card in self.player_cards:
+        for card in self.summoners_rift_player_cards:
             card.reset_card()
     
     def get_players(self):
@@ -161,11 +162,11 @@ class TeamMaker:
         team2_sup_player_card = PlayerCard(team2_sup_frame, "sup", self.min_win_rate, self.max_win_rate, self.min_play_rate, self.max_play_rate)
 
 
-        self.team1_player_names = [team1_top_player_name, team1_jg_player_name, team1_mid_player_name, team1_bot_player_name, team1_sup_player_name]
-        self.team2_player_names = [team2_top_player_name, team2_jg_player_name, team2_mid_player_name, team2_bot_player_name, team2_sup_player_name]
+        self.summoners_rift_team1_player_names = [team1_top_player_name, team1_jg_player_name, team1_mid_player_name, team1_bot_player_name, team1_sup_player_name]
+        self.summoners_rift_team2_player_names = [team2_top_player_name, team2_jg_player_name, team2_mid_player_name, team2_bot_player_name, team2_sup_player_name]
 
 
-        self.player_cards = [team1_top_player_card, team1_jg_player_card, team1_mid_player_card, team1_bot_player_card, team1_sup_player_card,
+        self.summoners_rift_player_cards = [team1_top_player_card, team1_jg_player_card, team1_mid_player_card, team1_bot_player_card, team1_sup_player_card,
                              team2_top_player_card, team2_jg_player_card, team2_mid_player_card, team2_bot_player_card, team2_sup_player_card]
         
     def setup_arena_screen(self):    

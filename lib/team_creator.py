@@ -21,6 +21,27 @@ def form_random_teams(players=PLAYERS):
 
     return team1, team2
 
+def form_arena_teams(players=PLAYERS):
+    team1 = []
+    team2 = []
+    team3 = []
+    team4 = []
+    random.shuffle(players)
+    random.shuffle(players)
+    random.shuffle(players)
+    for count, item in enumerate(players):
+        if count < 2:
+            team1.append(item)
+        elif count >=2 and count <4:
+            team2.append(item)
+        elif count >=4 and count <6:
+            team3.append(item)
+        elif count >=6 and count <8:
+            team4.append(item)
+
+
+    return team1, team2, team3, team4
+
 
 def assign_champions(team1, team2):
     team1_with_champs = {}
