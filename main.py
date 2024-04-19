@@ -58,5 +58,7 @@ if __name__ == "__main__":
     # print(team1)
     # print(team2)
     #write_all_roles_data()
+    #update_champion_data("arena")
+    #get_champion_data("arena")
     app = MainApp()
     app.run()
