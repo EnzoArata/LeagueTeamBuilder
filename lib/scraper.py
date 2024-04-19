@@ -11,6 +11,7 @@ def update_champion_data(lane):
     mid_url = "https://www.op.gg/champions?position=mid"
     bot_url = "https://www.op.gg/champions?position=adc"
     support_url = "https://www.op.gg/champions?position=support"
+    arena_url = "https://www.op.gg/modes/arena"
 
     # Configure Chrome options for a headless browser
     chrome_options = Options()
@@ -43,13 +44,15 @@ def update_champion_data(lane):
         download_page_contents(driver, bot_url,"bot")
     elif lane == "sup":
         download_page_contents(driver, support_url,"sup")
+    elif lane == "arena":
+        download_page_contents(driver, arena_url,"arena")
     driver.quit()
 
 
 def download_page_contents(driver, url, lane):
     driver.get(url)
-    time.sleep(4)
+    time.sleep(3)
     # Get the page source after JavaScript has rendered the page
     page_source = driver.page_source
-    with open(f"data/{lane}.html", "w", encoding="utf-8") as file:
+    with open(f"lib/data/{lane}.html", "w", encoding="utf-8") as file:
         file.write(page_source)

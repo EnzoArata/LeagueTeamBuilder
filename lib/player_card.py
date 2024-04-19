@@ -53,7 +53,8 @@ class PlayerCard:
         #print(champion)
         self.champ_name.configure(text = champion['name'])
         self.win_rate.configure(text = "WR " +champion['winrate'] + "%", text_color = update_label_color(champion['winrate']))
-        self.pick_rate.configure(text = "PR " +champion['pick_rate'])
+        if self.role != "arena":
+            self.pick_rate.configure(text = "PR " +champion['pick_rate'])
         #self.ban_rate.configure(text = "BR " +champion['ban_rate'])
         url = champion['img_src']
         response = requests.get(url)

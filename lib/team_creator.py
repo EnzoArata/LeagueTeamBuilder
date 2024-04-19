@@ -22,26 +22,11 @@ def form_random_teams(players=PLAYERS):
     return team1, team2
 
 def form_arena_teams(players=PLAYERS):
-    team1 = []
-    team2 = []
-    team3 = []
-    team4 = []
     random.shuffle(players)
     random.shuffle(players)
     random.shuffle(players)
-    for count, item in enumerate(players):
-        if count < 2:
-            team1.append(item)
-        elif count >=2 and count <4:
-            team2.append(item)
-        elif count >=4 and count <6:
-            team3.append(item)
-        elif count >=6 and count <8:
-            team4.append(item)
 
-
-    return team1, team2, team3, team4
-
+    return players
 
 def assign_champions(team1, team2):
     team1_with_champs = {}
@@ -63,12 +48,16 @@ def pick_random_champ(role, min_win_rate, max_win_rate, min_play_rate, max_play_
     # Check if champion data is available
     if champion_data_list:
         # Define the maximum pick rate based on wacky_value
-
-        eligible_champions = [champion for champion in champion_data_list
-                               if float(champion["pick_rate"]) <= float(max_play_rate) and
-                               float(champion["pick_rate"]) >= float(min_play_rate) and
-                               float(champion["winrate"]) <= float(max_win_rate) and
-                               float(champion["winrate"]) >= float(min_win_rate)]
+        if role == "arena":
+            eligible_champions = [champion for champion in champion_data_list
+                                if float(champion["winrate"]) <= float(max_win_rate) and
+                                float(champion["winrate"]) >= float(min_win_rate)]
+        else:
+            eligible_champions = [champion for champion in champion_data_list
+                                if float(champion["pick_rate"]) <= float(max_play_rate) and
+                                float(champion["pick_rate"]) >= float(min_play_rate) and
+                                float(champion["winrate"]) <= float(max_win_rate) and
+                                float(champion["winrate"]) >= float(min_win_rate)]
 
 
         random_champion = random.choice(eligible_champions)
