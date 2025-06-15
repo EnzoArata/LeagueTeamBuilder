@@ -12,7 +12,7 @@ class MainApp:
         self.root = customtkinter.CTk(fg_color='#171721')
 
         # Set the window size
-        window_width = 1000
+        window_width = 1400
         window_height = 800
 
         # Get screen width and height

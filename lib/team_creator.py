@@ -4,6 +4,7 @@ from lib.util import *
 
 PLAYERS = ["enzo", "steven", "eric", "rudy", "zack",
            "matt", "gibby", "sohail", "koby", "jason"]
+RANKS = [5,2,1,3,5,6,7,12,1.2]
 
 ROLES = ["top", "jg", "mid", "bot", "sup"]
 
@@ -20,6 +21,46 @@ def form_random_teams(players=PLAYERS):
             team2.append(item)
 
     return team1, team2
+
+def form_random_teams(players, ranks):
+    # Pair each player with their rank
+    paired = list(zip(players, ranks))
+    
+    # Shuffle to introduce randomness
+    random.shuffle(paired)
+
+    # Sort by rank (descending) to distribute higher ranked players evenly
+    paired.sort(key=lambda x: x[1], reverse=True)
+
+    team1, team2 = [], []
+    team1_rank, team2_rank = 0, 0
+
+    for player, rank in paired:
+        # Stop adding if both teams are full
+        if len(team1) >= 5 and len(team2) >= 5:
+            break
+
+        # Prefer the team with fewer total rank, with randomness
+        if (team1_rank < team2_rank and len(team1) < 5) or len(team2) >= 5:
+            if random.random() < 0.7:
+                team1.append(player)
+                team1_rank += rank
+            elif len(team2) < 5:
+                team2.append(player)
+                team2_rank += rank
+        else:
+            if random.random() < 0.7:
+                team2.append(player)
+                team2_rank += rank
+            elif len(team1) < 5:
+                team1.append(player)
+                team1_rank += rank
+
+    print(f"Team 1 (Total Rank: {team1_rank}): {team1}")
+    print(f"Team 2 (Total Rank: {team2_rank}): {team2}")
+
+    return team1, team2
+
 
 def form_arena_teams(players=PLAYERS):
     random.shuffle(players)

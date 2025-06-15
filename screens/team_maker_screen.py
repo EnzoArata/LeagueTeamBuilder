@@ -17,9 +17,10 @@ class TeamMaker:
 
     def create_teams(self):
         players = self.get_players()
+        ranks = self.get_ranks()
         if players:
             if self.current_mode == "summoners_rift":
-                self.team1, self.team2 = form_random_teams(players)
+                self.team1, self.team2 = form_random_teams(players, ranks)
             if self.current_mode == "arena":
                 self.arena_teams = form_arena_teams(players)
         else:
@@ -46,10 +47,13 @@ class TeamMaker:
             card.reset_card()
     
     def get_players(self):
-        players = self.player_entry.get()
-        split_list = players.split(",")
-        return (split_list if len(split_list) > 1 else None)
+        # players = self.player_entry.get()
+        # split_list = players.split(",")
+        # return (split_list if len(split_list) > 1 else None)
+        return [i.get() for i in self.player_names]
     
+    def get_ranks(self):
+        return [int(i.get()) for i in self.player_ranks]
 
 
     def setup_summoners_rift_screen(self):
@@ -319,31 +323,65 @@ class TeamMaker:
         if self.current_mode == "summoners_rift":
             self.arena_frame.grid_forget()
             self.summoners_rift_frame.grid(row=2, column=0,rowspan=16, columnspan=20, sticky="nswe")
+    
+    def create_entry_form(self, frame, row):
+        entry = customtkinter.CTkEntry(master=frame, placeholder_text="Player 1", width=200,
+                                            font=("Inter", 16, "bold"), placeholder_text_color="#6C6C87", text_color='#FFFFFF', 
+                                            height=44, border_color="#6C6C87", border_width=1, fg_color="#1D1D2C", )
+        entry.grid(row=row, column=0, pady=1, padx=[0,5], columnspan=1,)
+        entry.grid_propagate(False)
+
+        rank = customtkinter.CTkEntry(master=frame, placeholder_text="5", 
+                                            font=("Inter", 16, "bold"), placeholder_text_color="#6C6C87", text_color='#FFFFFF', 
+                                            height=44,  border_color="#6C6C87", border_width=1, fg_color="#1D1D2C", )
+        rank.grid(row=row, column=3, pady=1, padx=2, columnspan=1,)
+        rank.insert(0,"5")
+        rank.grid_propagate(False)
+
+        self.player_names.append(entry)
+        self.player_ranks.append(rank)
+
+
+    def setup_player_entry(self):
+        player_entry_frame = customtkinter.CTkFrame(master=self.master_frame, fg_color="#171721")
+        player_entry_frame.grid(row=2, column=21, rowspan=16, columnspan=3,  pady=0, padx=0, sticky="nsew")
+        player_entry_frame.grid_propagate(False)
+        self.define_grid(player_entry_frame, 4, 10)
+
+        player_name_label = customtkinter.CTkLabel(master=player_entry_frame, text="Player Names", font=("Inter", 16, "bold"),
+                                              text_color="#a1a1b3", height=5)
+        player_name_label.grid(row=0, column=0, pady=[0,0], padx=2, stick="nsw")
+
+        player_rank_label = customtkinter.CTkLabel(master=player_entry_frame, text="Rank", font=("Inter", 16, "bold"),
+                                              text_color="#a1a1b3", height=5)
+        player_rank_label.grid(row=0, column=3, pady=[0,0], padx=2, stick="nsw")
+
+        self.player_names = []
+        self.player_ranks = []
+
+        for i in range(1,11):
+            self.create_entry_form(player_entry_frame, i)
+    
+
         
     def setup_team_maker_screen(self, root):
         self.master_frame = customtkinter.CTkFrame(master=root, fg_color="#171721")
         self.master_frame.grid(row=0, column=0, pady=0, padx=0, sticky="nsew")
         self.master_frame.grid_propagate(False)
-        self.define_grid(self.master_frame, 20, 20)
+        self.define_grid(self.master_frame, 24, 20)
 
 
-        self.player_entry = customtkinter.CTkEntry(master=self.master_frame, placeholder_text="Enter Player Names, seperated by columns", 
-                                            font=("Inter", 16, "bold"), placeholder_text_color="#6C6C87", text_color='#FFFFFF', 
-                                            height=44, width=700, border_color="#6C6C87", border_width=2, fg_color="#1D1D2C", )
-        self.player_entry.grid(row=0, column=0, pady=[0,5], padx=12, columnspan=1,)
-        self.player_entry.bind("<Return>", lambda event=None: self.create_teams())
-
-        self.randomize_team_button = customtkinter.CTkButton(master=self.master_frame, text="Randomize Teams", font=("Inter", 16, "bold"),
+        self.randomize_team_button = customtkinter.CTkButton(master=self.master_frame, text="Randomize Teams", font=("Inter", 18, "bold"),
                                         command=self.create_teams, fg_color="#04DA8B", text_color="#FFFFFF", height=45, width=250 )
-        self.randomize_team_button.grid(row=0, column=1, pady=5, padx=12, columnspan=1)
+        self.randomize_team_button.grid(row=0, column=2, pady=5, padx=12, columnspan=6)
 
                 #####################################################################################################################
 
         settings_frame = customtkinter.CTkFrame(master=self.master_frame, fg_color="#323259", border_color="#6C6C87", border_width=2,
-                                             height=70,width=350)
-        settings_frame.grid(row=1, column=0, sticky="nsew", columnspan=2, rowspan=1, pady=3)
+                                             height=70,width=900)
+        settings_frame.grid(row=1, column=0, sticky="nsew", columnspan=18, rowspan=1, pady=3)
         #settings_frame.grid_propagate(False)
-        self.define_grid(settings_frame, 10, 1)
+        self.define_grid(settings_frame, 12, 1)
 
         win_rate_label = customtkinter.CTkLabel(master=settings_frame, text="Settings", font=("Inter", 18, "bold"),
                                               text_color="#a1a1b3", height=5)
@@ -386,12 +424,19 @@ class TeamMaker:
         self.max_play_rate.grid(row=0, column=9, stick="w")
         self.max_play_rate.insert(0, "25.00")
 
+        blink_pick_label = customtkinter.CTkLabel(master=settings_frame, text="Blind Pick", font=("Inter", 14, "bold"),
+                                              text_color="#a1a1b3", height=5)
+        blink_pick_label.grid(row=0, column=10, pady=[0,0], padx=2, stick="e")
+
+        self.blind_pick = customtkinter.CTkCheckBox(master=settings_frame, text="")
+        self.blind_pick.grid(row=0,column=11, pady=[0,0], padx=2, stick="w")
+
         #####################################################################################################################
 
         mode_button_frame = customtkinter.CTkFrame(master=self.master_frame, fg_color="#171721", 
                                                    border_color="#6C6C87", border_width=2, height=60)
         mode_button_frame.grid_propagate(False)
-        mode_button_frame.grid(row=20, column=0, columnspan=1, rowspan=1, sticky="nsew")
+        mode_button_frame.grid(row=20, column=0, columnspan=3, rowspan=1, sticky="nsew")
         self.define_grid(mode_button_frame, 2, 1)
 
         self.summoners_rift_button = customtkinter.CTkButton(master=mode_button_frame, text="Summoners Rift", font=("Inter", 16, "bold"),
@@ -406,8 +451,9 @@ class TeamMaker:
 
         patch_label = customtkinter.CTkLabel(master=self.master_frame, text="-- Patch 15.12 --  6/15/2025  -- Enzo Arata --",
                                               font=("Inter", 12, "bold"), text_color="#6C6C87", width = 500)
-        patch_label.grid(row=20, column=1, pady=[0,0], padx=5, sticky="nesw")
+        patch_label.grid(row=20, column=5, pady=[0,0], padx=5, sticky="nesw")
 
+        self.setup_player_entry()
         self.setup_summoners_rift_screen()
         self.setup_arena_screen()
         self.current_mode = "summoners_rift"
