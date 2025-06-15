@@ -21,7 +21,7 @@ def get_champion_data(role):
     if role == "arena":
         table = soup.find("table", class_="css-1cwphh3 et81iej0")
     else:
-        table = soup.find("table", class_="css-f65xnu et81iej1")
+        table = soup.find("table", class_="table-fixed")
 
     # Check if the table is found
     if table:

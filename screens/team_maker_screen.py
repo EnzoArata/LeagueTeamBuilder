@@ -404,7 +404,7 @@ class TeamMaker:
         
 
 
-        patch_label = customtkinter.CTkLabel(master=self.master_frame, text="-- Patch 14.07 --  4/16/2024  -- Enzo Arata --",
+        patch_label = customtkinter.CTkLabel(master=self.master_frame, text="-- Patch 15.12 --  6/15/2025  -- Enzo Arata --",
                                               font=("Inter", 12, "bold"), text_color="#6C6C87", width = 500)
         patch_label.grid(row=20, column=1, pady=[0,0], padx=5, sticky="nesw")
 

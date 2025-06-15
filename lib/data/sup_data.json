@@ -1,296 +1,324 @@
 [
     {
-        "name": "Janna",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Janna.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "52.67",
-        "pick_rate": "9.43",
-        "ban_rate": "9.20"
+        "name": "Lulu",
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Lulu.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "51.71",
+        "pick_rate": "12.61",
+        "ban_rate": "19.5"
     },
     {
         "name": "Nami",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Nami.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "51.88",
-        "pick_rate": "9.89",
-        "ban_rate": "0.67"
-    },
-    {
-        "name": "Blitzcrank",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Blitzcrank.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "51.83",
-        "pick_rate": "7.94",
-        "ban_rate": "31.03"
-    },
-    {
-        "name": "Thresh",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Thresh.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "50.64",
-        "pick_rate": "12.61",
-        "ban_rate": "4.08"
-    },
-    {
-        "name": "Lulu",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Lulu.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "50.55",
-        "pick_rate": "12.74",
-        "ban_rate": "7.48"
-    },
-    {
-        "name": "Pyke",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Pyke.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "51.53",
-        "pick_rate": "7.65",
-        "ban_rate": "17.93"
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Nami.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "51.41",
+        "pick_rate": "13.22",
+        "ban_rate": "2.65"
     },
     {
         "name": "Sona",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Sona.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "53.07",
-        "pick_rate": "4.29",
-        "ban_rate": "0.27"
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Sona.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "54.35",
+        "pick_rate": "3.23",
+        "ban_rate": "0.21"
     },
     {
         "name": "Braum",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Braum.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "52.45",
-        "pick_rate": "4.66",
-        "ban_rate": "1.31"
-    },
-    {
-        "name": "Rakan",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Rakan.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "51.70",
-        "pick_rate": "6.46",
-        "ban_rate": "1.47"
-    },
-    {
-        "name": "Leona",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Leona.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "51.92",
-        "pick_rate": "5.65",
-        "ban_rate": "3.28"
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Braum.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "51.98",
+        "pick_rate": "8.59",
+        "ban_rate": "14.53"
     },
     {
         "name": "Milio",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Milio.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "50.92",
-        "pick_rate": "7.57",
-        "ban_rate": "4.02"
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Milio.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "52.13",
+        "pick_rate": "7.81",
+        "ban_rate": "4.59"
     },
     {
-        "name": "Soraka",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Soraka.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "51.96",
-        "pick_rate": "4.58",
-        "ban_rate": "1.39"
-    },
-    {
-        "name": "Nautilus",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Nautilus.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "49.16",
-        "pick_rate": "10.49",
-        "ban_rate": "15.84"
-    },
-    {
-        "name": "Zilean",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Zilean.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "52.18",
-        "pick_rate": "2.89",
-        "ban_rate": "0.67"
-    },
-    {
-        "name": "Taric",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Taric.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "53.36",
-        "pick_rate": "1.52",
-        "ban_rate": "0.25"
-    },
-    {
-        "name": "Senna",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Senna.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "50.26",
-        "pick_rate": "5.71",
-        "ban_rate": "5.95"
-    },
-    {
-        "name": "Zyra",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Zyra.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "51.01",
-        "pick_rate": "4.07",
-        "ban_rate": "4.58"
-    },
-    {
-        "name": "Alistar",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Alistar.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "50.90",
-        "pick_rate": "4.31",
-        "ban_rate": "1.62"
-    },
-    {
-        "name": "Lux",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Lux.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "49.62",
-        "pick_rate": "6.76",
-        "ban_rate": "2.26"
-    },
-    {
-        "name": "Rell",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Rell.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "51.27",
-        "pick_rate": "3.39",
-        "ban_rate": "1.22"
-    },
-    {
-        "name": "Brand",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Brand.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "51.12",
-        "pick_rate": "3.03",
-        "ban_rate": "1.74"
+        "name": "Thresh",
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Thresh.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "50.9",
+        "pick_rate": "11.71",
+        "ban_rate": "5.65"
     },
     {
         "name": "Bard",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Bard.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "51.14",
-        "pick_rate": "3.11",
-        "ban_rate": "0.58"
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Bard.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "51.56",
+        "pick_rate": "5.58",
+        "ban_rate": "1.27"
     },
     {
-        "name": "Renata Glasc",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Renata.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "51.70",
-        "pick_rate": "2.30",
-        "ban_rate": "0.41"
-    },
-    {
-        "name": "Morgana",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Morgana.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "49.95",
-        "pick_rate": "4.09",
-        "ban_rate": "15.04"
-    },
-    {
-        "name": "Vel'Koz",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Velkoz.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "51.54",
-        "pick_rate": "2.05",
-        "ban_rate": "0.22"
-    },
-    {
-        "name": "Yuumi",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Yuumi.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "49.02",
-        "pick_rate": "5.91",
-        "ban_rate": "5.09"
-    },
-    {
-        "name": "Maokai",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Maokai.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "50.75",
-        "pick_rate": "2.60",
-        "ban_rate": "2.08"
-    },
-    {
-        "name": "Seraphine",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Seraphine.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "50.54",
-        "pick_rate": "2.84",
-        "ban_rate": "0.39"
-    },
-    {
-        "name": "Poppy",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Poppy.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "52.77",
-        "pick_rate": "0.77",
-        "ban_rate": "0.54"
-    },
-    {
-        "name": "Zac",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Zac.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
+        "name": "Janna",
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Janna.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
         "winrate": "51.86",
-        "pick_rate": "1.08",
-        "ban_rate": "0.76"
+        "pick_rate": "4.82",
+        "ban_rate": "1.66"
+    },
+    {
+        "name": "Leona",
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Leona.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "50.87",
+        "pick_rate": "6.38",
+        "ban_rate": "4.94"
+    },
+    {
+        "name": "Alistar",
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Alistar.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "50.72",
+        "pick_rate": "6.81",
+        "ban_rate": "2.43"
+    },
+    {
+        "name": "Nautilus",
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Nautilus.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "49.73",
+        "pick_rate": "9.85",
+        "ban_rate": "12.48"
+    },
+    {
+        "name": "Soraka",
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Soraka.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "51.15",
+        "pick_rate": "5.16",
+        "ban_rate": "2.22"
+    },
+    {
+        "name": "Zilean",
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Zilean.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "52.24",
+        "pick_rate": "2.95",
+        "ban_rate": "1.15"
+    },
+    {
+        "name": "Rakan",
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Rakan.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "51.03",
+        "pick_rate": "4.93",
+        "ban_rate": "0.44"
+    },
+    {
+        "name": "Rell",
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Rell.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "50.64",
+        "pick_rate": "5.73",
+        "ban_rate": "2.75"
     },
     {
         "name": "Karma",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Karma.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "47.54",
-        "pick_rate": "6.81",
-        "ban_rate": "6.87"
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Karma.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "49.65",
+        "pick_rate": "8.38",
+        "ban_rate": "5.11"
     },
     {
-        "name": "Camille",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Camille.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "49.29",
-        "pick_rate": "2.79",
-        "ban_rate": "2.40"
+        "name": "Pyke",
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Pyke.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "50.02",
+        "pick_rate": "6.3",
+        "ban_rate": "23.91"
     },
     {
-        "name": "Xerath",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Xerath.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "49.03",
-        "pick_rate": "3.17",
-        "ban_rate": "2.59"
+        "name": "Blitzcrank",
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Blitzcrank.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "50.67",
+        "pick_rate": "5.02",
+        "ban_rate": "11.89"
     },
     {
-        "name": "Shaco",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Shaco.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "49.28",
-        "pick_rate": "2.24",
-        "ban_rate": "6.60"
+        "name": "Poppy",
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Poppy.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "51.88",
+        "pick_rate": "2.75",
+        "ban_rate": "6.09"
     },
     {
-        "name": "Pantheon",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Pantheon.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "49.64",
-        "pick_rate": "2.13",
-        "ban_rate": "0.79"
+        "name": "Elise",
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Elise.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "51.55",
+        "pick_rate": "2.4",
+        "ban_rate": "8.41"
     },
     {
-        "name": "Neeko",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Neeko.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "49.55",
-        "pick_rate": "1.76",
-        "ban_rate": "0.85"
+        "name": "Taric",
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Taric.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "52.82",
+        "pick_rate": "1.42",
+        "ban_rate": "0.2"
     },
     {
-        "name": "Tahm Kench",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/TahmKench.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "50.48",
-        "pick_rate": "1.12",
-        "ban_rate": "0.30"
+        "name": "Yuumi",
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Yuumi.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "49.16",
+        "pick_rate": "7.16",
+        "ban_rate": "11.53"
     },
     {
         "name": "Fiddlesticks",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Fiddlesticks.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "51.40",
-        "pick_rate": "0.52",
-        "ban_rate": "0.27"
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Fiddlesticks.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "53.18",
+        "pick_rate": "0.98",
+        "ban_rate": "2.63"
+    },
+    {
+        "name": "Vel'Koz",
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Velkoz.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "51.12",
+        "pick_rate": "2.61",
+        "ban_rate": "0.8"
+    },
+    {
+        "name": "Pantheon",
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Pantheon.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "50.53",
+        "pick_rate": "2.92",
+        "ban_rate": "10.84"
+    },
+    {
+        "name": "Morgana",
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Morgana.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "50.05",
+        "pick_rate": "3.31",
+        "ban_rate": "10.04"
+    },
+    {
+        "name": "Lux",
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Lux.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "49.02",
+        "pick_rate": "4.86",
+        "ban_rate": "2.75"
+    },
+    {
+        "name": "Xerath",
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Xerath.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "49.69",
+        "pick_rate": "2.94",
+        "ban_rate": "4.51"
+    },
+    {
+        "name": "Seraphine",
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Seraphine.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "50",
+        "pick_rate": "2.56",
+        "ban_rate": "0.39"
+    },
+    {
+        "name": "Maokai",
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Maokai.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "50.82",
+        "pick_rate": "1.73",
+        "ban_rate": "0.21"
+    },
+    {
+        "name": "LeBlanc",
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Leblanc.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "51.64",
+        "pick_rate": "0.9",
+        "ban_rate": "20.28"
+    },
+    {
+        "name": "Shaco",
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Shaco.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "49.17",
+        "pick_rate": "2.07",
+        "ban_rate": "25.5"
+    },
+    {
+        "name": "Senna",
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Senna.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "47.55",
+        "pick_rate": "4.03",
+        "ban_rate": "24.49"
+    },
+    {
+        "name": "Zyra",
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Zyra.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "49.32",
+        "pick_rate": "2.29",
+        "ban_rate": "2.15"
+    },
+    {
+        "name": "Brand",
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Brand.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "50.27",
+        "pick_rate": "1.4",
+        "ban_rate": "0.93"
+    },
+    {
+        "name": "Neeko",
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Neeko.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "48.74",
+        "pick_rate": "2.35",
+        "ban_rate": "1.59"
     },
     {
         "name": "Swain",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Swain.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "48.10",
-        "pick_rate": "1.86",
-        "ban_rate": "0.41"
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Swain.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "49.09",
+        "pick_rate": "1.87",
+        "ban_rate": "0.66"
     },
     {
-        "name": "Ashe",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Ashe.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "47.20",
-        "pick_rate": "2.54",
-        "ban_rate": "0.86"
+        "name": "Tahm Kench",
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/TahmKench.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "48.93",
+        "pick_rate": "1.95",
+        "ban_rate": "0.85"
+    },
+    {
+        "name": "Renata Glasc",
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Renata.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "49.38",
+        "pick_rate": "1.58",
+        "ban_rate": "0.22"
+    },
+    {
+        "name": "Shen",
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Shen.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "49.79",
+        "pick_rate": "0.84",
+        "ban_rate": "6.26"
+    },
+    {
+        "name": "Zoe",
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Zoe.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "49.34",
+        "pick_rate": "0.84",
+        "ban_rate": "8.72"
     },
     {
         "name": "Hwei",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Hwei.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "47.06",
-        "pick_rate": "2.40",
-        "ban_rate": "3.58"
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Hwei.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "48.82",
+        "pick_rate": "0.59",
+        "ban_rate": "2.95"
     },
     {
-        "name": "Rumble",
-        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/14.7.1/champion/Rumble.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto,f_webp,w_160,h_160&v=1710914129937",
-        "winrate": "46.68",
-        "pick_rate": "0.80",
-        "ban_rate": "0.43"
+        "name": "Sylas",
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Sylas.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "46.95",
+        "pick_rate": "1.21",
+        "ban_rate": "9.04"
+    },
+    {
+        "name": "Mel",
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Mel.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "44.64",
+        "pick_rate": "2.44",
+        "ban_rate": "25.18"
+    },
+    {
+        "name": "Galio",
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Galio.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "47.21",
+        "pick_rate": "0.59",
+        "ban_rate": "2.96"
+    },
+    {
+        "name": "Ashe",
+        "img_src": "https://opgg-static.akamaized.net/meta/images/lol/15.12.1/champion/Ashe.png?image=c_crop,h_103,w_103,x_9,y_9/q_auto:good,f_webp,w_160,h_160&v=1512",
+        "winrate": "43.37",
+        "pick_rate": "0.59",
+        "ban_rate": "1.55"
     }
 ]

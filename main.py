@@ -57,7 +57,7 @@ if __name__ == "__main__":
     # team1, team2 = assign_champions(team1, team2)
     # print(team1)
     # print(team2)
-    #write_all_roles_data()
+    # write_all_roles_data()
     #update_champion_data("arena")
     #get_champion_data("arena")
     app = MainApp()
