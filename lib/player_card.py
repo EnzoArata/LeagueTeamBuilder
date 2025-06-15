@@ -7,12 +7,14 @@ from lib.util import *
 
 
 class PlayerCard:
-    def __init__(self, master_frame, role, min_win_rate, max_win_rate, min_play_rate, max_play_rate):
+    def __init__(self, master_frame, role, min_win_rate, max_win_rate, min_play_rate, max_play_rate, blind_pick, team):
         self.role = role
         self.min_win_rate = min_win_rate
         self.max_win_rate = max_win_rate
         self.min_play_rate = min_play_rate
         self.max_play_rate = max_play_rate
+        self.blind_pick = blind_pick
+        self.team = team
         self.champ_image = customtkinter.CTkImage(Image.open(os.path.join(SCRIPT_DIR, "blank.png")), size=(100,100))
         
         self.champ_image_label = customtkinter.CTkLabel(master=master_frame, text="", image=self.champ_image, height=1, )
@@ -49,7 +51,7 @@ class PlayerCard:
                 red_intensity = max(255 - int(255 * (50 - val_float) / 50) ** 2, 0)  # Ensure intensity is within valid range
             return f"#c9{red_intensity:02x}21"
 
-        champion = pick_random_champ(self.role, self.min_win_rate.get(),self.max_win_rate.get(), self.min_play_rate.get(), self.max_play_rate.get())
+        champion = pick_random_champ(self.role, self.min_win_rate.get(),self.max_win_rate.get(), self.min_play_rate.get(), self.max_play_rate.get(), self.blind_pick, self.team, self.champ_name.cget("text"))
         #print(champion)
         self.champ_name.configure(text = champion['name'])
         self.win_rate.configure(text = "WR " +champion['winrate'] + "%", text_color = update_label_color(champion['winrate']))
@@ -62,6 +64,7 @@ class PlayerCard:
         image = Image.open(BytesIO(image_data))
         new_champ_image = customtkinter.CTkImage(image, size=(100,100))
         self.champ_image_label.configure(image=new_champ_image)
+    
 
     def reset_card(self):
         self.champ_name.configure(text = "-")
